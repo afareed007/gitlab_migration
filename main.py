@@ -4,9 +4,8 @@ import gitlab
 
 load_dotenv()
 
-# Configuration from .env file
-SOURCE_GITLAB_URL = os.getenv('SOURCE_GITLAB_URL')  # Replace with your GitLab instance URL from .env
-PERSONAL_ACCESS_TOKEN = os.getenv('PERSONAL_ACCESS_TOKEN')  # Replace with your personal access token from .env
+SOURCE_GITLAB_URL = os.getenv('SOURCE_GITLAB_URL')
+PERSONAL_ACCESS_TOKEN = os.getenv('PERSONAL_ACCESS_TOKEN')
 
 # Initialize GitLab
 gl = gitlab.Gitlab(SOURCE_GITLAB_URL, private_token=PERSONAL_ACCESS_TOKEN)
